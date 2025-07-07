@@ -14,10 +14,10 @@ app = Flask(__name__, static_folder='static', template_folder='templates')
 # --- Azure OpenAI Configuration ---
 # It's best practice to use environment variables for keys and endpoints
 # For Azure deployment, these will be set in the App Service Configuration
-AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
-AZURE_OPENAI_KEY = os.getenv("AZURE_OPENAI_KEY")
+AZURE_OPENAI_ENDPOINT = os.getenv("AZUREOPENAIENDPOINT")
+AZURE_OPENAI_KEY = os.getenv("AZUREOPENAIKEY")
 AZURE_OPENAI_API_VERSION = "2024-02-01" # Use a recent, stable version
-AZURE_OPENAI_DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")
+AZURE_OPENAI_DEPLOYMENT_NAME = os.getenv("AZUREOPENAIDEPLOYMENTNAME")
 
 # Initialize the Azure OpenAI client
 client = AzureOpenAI(
